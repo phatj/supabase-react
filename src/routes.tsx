@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Route, Routes as BaseRoutes } from "react-router-dom";
-import { DefaultLayout } from "./components/Layout";
+import { Routes as BaseRoutes, Route } from "react-router-dom";
+import { DefaultLayout } from "./layouts";
 import { Home } from "./pages/home";
 
 export const Routes: FC = () => {
