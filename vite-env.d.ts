@@ -2,6 +2,8 @@
 
 interface Envs {
   ANALYZE?: "true";
+  VITE_SUPABASE_URL: string;
+  VITE_SUPABASE_KEY: string;
 }
 
 interface ImportMetaEnv extends Envs {}
