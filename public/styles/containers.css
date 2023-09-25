@@ -1,0 +1,28 @@
+@import './variables.css';
+
+/* containers */
+.container {
+  margin: auto;
+}
+
+.container.xl {
+  max-width: var(--container-xl);
+}
+
+.container.lg {
+  max-width: var(--container-lg);
+}
+
+.container.md {
+  max-width: var(--container-md);
+}
+
+.container.sm {
+  max-width: var(--container-sm);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
