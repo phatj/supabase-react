@@ -8,6 +8,32 @@
  margin: auto
 }
 
+.form > h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
 .form > input, button {
   padding: 0.5rem;
+  border-radius: 3px;
+  transition: all 0.1s;
+}
+
+.form > input {
+  border: 1px solid;
+}
+
+.form > input:focus-visible, button:focus-visible {
+  outline: 2px solid rgba(28, 138, 216, 0.776);
+  outline-offset: 2px;
+}
+
+.form > input::placeholder {
+  color:rgb(131, 131, 131)
+}
+
+.form > button {
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid;
 }

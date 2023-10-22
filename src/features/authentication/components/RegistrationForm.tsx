@@ -16,8 +16,9 @@ export const RegistrationForm: FC = () => {
 
   return (
     <form onSubmit={onSubmit} className={styles.form}>
-      <input type="email" name="email" />
-      <input type="password" name="password" />
+      <h2>Register</h2>
+      <input type="email" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Password" />
 
       <button type="submit">Submit</button>
     </form>
