@@ -1,7 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { visualizer } from "rollup-plugin-visualizer";
-import { defineConfig, UserConfig } from "vite";
+import { UserConfig, defineConfig, splitVendorChunkPlugin } from "vite";
 import checker from "vite-plugin-checker";
 import pluginRewriteAll from "vite-plugin-rewrite-all";
 
@@ -11,6 +11,7 @@ const plugins: UserConfig["plugins"] = [
   checker({
     typescript: true,
   }),
+  splitVendorChunkPlugin(),
 ];
 
 if (process.env.ANALYZE === "true") {
@@ -25,17 +26,6 @@ export default defineConfig({
     alias: {
       "~": resolve(__dirname, "src"),
       "@": resolve(__dirname, "lib"),
-    },
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            return "vendor";
-          }
-        },
-      },
     },
   },
 });

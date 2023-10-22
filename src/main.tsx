@@ -1,3 +1,5 @@
+import "./styles/main.css";
+
 import { SupabaseProvider } from "@/react-supabase";
 import { FC, ReactNode, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
