@@ -1,3 +1,5 @@
+export * from "./components/ShowWhenSignedIn";
+export * from "./components/ShowWhenSignedOut";
 export * from "./components/SignedIn";
 export * from "./components/SignedOut";
 export * from "./context/SupabaseContext";

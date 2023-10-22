@@ -17,4 +17,10 @@
   --container-md: calc(var(--breakpoint-tablet) - 6rem * 2);
   --container-lg: calc(var(--breakpoint-desktop) - 9rem * 2);
   --container-xl: calc(var(--breakpoint-wide) - 12rem * 2);
+
+  /* nav */
+  --nav-font-size: var(--size-sm);
+  --nav-item-padding: var(--size-md);
+  --nav-height: calc( var(--size-sm) + var(--size-md) * 2 );
+  --full-height-with-nav: calc(100vh - 1rem - var(--nav-height));
 }

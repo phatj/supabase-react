@@ -1,0 +1,10 @@
+.nav {
+  font-size: var(--nav-font-size);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav a {
+  padding: var(--nav-item-padding);
+  display: inline-block;
+}

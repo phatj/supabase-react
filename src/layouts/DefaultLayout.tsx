@@ -1,10 +1,14 @@
 import { FC } from "react";
 import { Outlet } from "react-router-dom";
+import { Navbar } from "~/components/Navbar";
 
 export const DefaultLayout: FC = () => {
   return (
-    <div className="container xl">
-      <Outlet />
-    </div>
+    <>
+      <Navbar />
+      <div className="container xl">
+        <Outlet />
+      </div>
+    </>
   );
 };
