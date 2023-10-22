@@ -1,11 +1,12 @@
+import { SignedIn, SignedOut } from "@/react-supabase";
 import { FC } from "react";
 import { Routes as BaseRoutes, Route } from "react-router-dom";
 import { DefaultLayout } from "./layouts";
-import { Home } from "./pages/home/home";
-import { Register } from "./pages/register/register";
-import { SignedIn, SignedOut } from "@/react-supabase";
 import { Dashboard } from "./pages/dashboard";
+import { Home } from "./pages/home/home";
 import { NotFound } from "./pages/not-found";
+import { Register } from "./pages/register";
+import { SignIn } from "./pages/sign-in";
 
 export const Routes: FC = () => {
   return (
@@ -18,6 +19,15 @@ export const Routes: FC = () => {
           element={
             <SignedOut to="/dashboard">
               <Register />
+            </SignedOut>
+          }
+        />
+
+        <Route
+          path="sign-in"
+          element={
+            <SignedOut to="/dashboard">
+              <SignIn />
             </SignedOut>
           }
         />
